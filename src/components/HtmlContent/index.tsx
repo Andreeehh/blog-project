@@ -1,5 +1,5 @@
 import * as Styled from './styles';
-import ReactMarkdown from 'react-markdown';
+// import ReactMarkdown from 'react-markdown';
 
 export type HtmlContentProps = {
   html: string;
@@ -7,8 +7,9 @@ export type HtmlContentProps = {
 
 export const HtmlContent = ({ html }: HtmlContentProps) => {
   return (
-    <Styled.Container>
-      <ReactMarkdown>{html}</ReactMarkdown>
-    </Styled.Container>
+    // <Styled.Container>
+    //   <ReactMarkdown>{html}</ReactMarkdown>
+    // </Styled.Container>
+    <Styled.Container dangerouslySetInnerHTML={{ __html: html }} />
   );
 };

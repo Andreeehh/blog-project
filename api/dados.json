@@ -1,0 +1,149 @@
+{
+  "data": {
+    "setting": {
+      "data": {
+        "id": "1",
+        "attributes": {
+          "blogName": "André Carvalho",
+          "blogDescription": "Blog feito para publicações automáticas via chatGPT",
+          "logo": {
+            "data": [
+              {
+                "id": "3",
+                "attributes": {
+                  "alternativeText": null,
+                  "url": "https://res.cloudinary.com/dxcyn87v8/image/upload/v1687182118/dev_92fcae174c.jpg"
+                }
+              }
+            ]
+          },
+          "menuLink": [
+            {
+              "id": "1",
+              "link": "texto",
+              "text": "texto",
+              "newTab": false
+            }
+          ],
+          "text": "Texto footer"
+        }
+      }
+    },
+    "posts": {
+      "data": [
+        {
+          "id": "1",
+          "attributes": {
+            "title": "Meu primeiro post",
+            "slug": "meu-primeiro-post",
+            "except": "Esse é o primeiro post feito em aula do Curso de React do Otávio Miranda, criando um blog com back-end no strapi e front end em react",
+            "content": "🚀 Meu primeiro post no Curso de React do Otávio Miranda! 🎓\n\nOlá a todos! Estou super empolgado em compartilhar com vocês o meu primeiro projeto desenvolvido durante as aulas do Curso de React, ministrado pelo incrível Otávio Miranda. Nesta jornada, estou aprendendo a criar um blog com back-end no strap e front-end em React.\n\nPara quem não está familiarizado, o React é uma biblioteca JavaScript extremamente popular e poderosa para a criação de interfaces de usuário interativas. Com sua abordagem baseada em componentes reutilizáveis, o React torna o desenvolvimento de aplicações web mais eficiente e eficaz.\n\nNo curso, temos a oportunidade de mergulhar profundamente no mundo do React e aprender os fundamentos essenciais para a construção de aplicações web modernas. Através das instruções detalhadas e exemplos práticos fornecidos pelo Otávio Miranda, estou aprendendo a desenvolver projetos incríveis e funcionais.\n\nNo meu primeiro projeto, estou criando um blog. Mas aqui está a parte interessante: estamos utilizando um back-end no strapi, uma tecnologia poderosa que nos permite construir a infraestrutura necessária para o blog. Combinando-o com o front-end em React, podemos criar uma experiência de usuário perfeita e interativa.\n\nA criação de um blog com essa arquitetura me permite explorar e aplicar conceitos avançados de React, como roteamento, gerenciamento de estado e interação com APIs. Estou aprendendo a construir componentes reutilizáveis, lidar com rotas dinâmicas e integrar o front-end com o back-end de forma eficiente.\n\nAo longo do curso, compartilharei minha jornada de aprendizado, insights interessantes e os desafios que encontro durante o desenvolvimento do meu projeto. Também estarei à disposição para responder a quaisquer perguntas que vocês possam ter e espero que possamos trocar conhecimentos e experiências valiosas.\n\nAgradeço ao Otávio Miranda pela sua dedicação em ensinar e compartilhar seu conhecimento de forma clara e envolvente. Estou ansioso para explorar mais sobre o React e criar projetos incríveis durante este curso.\n\nFiquem ligados para atualizações sobre o meu projeto do blog em React! Vamos embarcar nessa jornada de aprendizado e construção juntos. 🚀💻\n\n#CursoDeReact #BlogComStrap #FrontEndReact #Aprendizado #DesenvolvimentoWeb",
+            "cover": {
+              "data": {
+                "id": "2",
+                "attributes": {
+                  "alternativeText": null,
+                  "url": "https://res.cloudinary.com/dxcyn87v8/image/upload/v1685711665/beautiful_view_greenery_bridge_forest_perfect_background_181624_17827_814287f2a3.avif"
+                }
+              }
+            },
+            "categories": {
+              "data": [
+                {
+                  "id": "5",
+                  "attributes": {
+                    "displayName": "React",
+                    "slug": "react"
+                  }
+                },
+                {
+                  "id": "4",
+                  "attributes": {
+                    "displayName": "JavaScript",
+                    "slug": "java-script"
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "data": [
+                {
+                  "id": "1",
+                  "attributes": {
+                    "displayName": "useState",
+                    "slug": "use-state"
+                  }
+                }
+              ]
+            },
+            "author": {
+              "data": {
+                "id": "1",
+                "attributes": {
+                  "displayName": "André Carvalho",
+                  "slug": "andre-carvalho"
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "2",
+          "attributes": {
+            "title": "Segundo Post",
+            "slug": "segundo-post",
+            "except": "Post teste",
+            "content": "📢 Novo Post: A Evolução do Desenvolvimento Web: React e Strapi - Uma Combinação Poderosa! 🚀\n\nOlá, comunidade! Estamos de volta com mais um emocionante post sobre o incrível mundo do desenvolvimento web. Hoje, vamos explorar a evolução contínua dessa área e destacar a combinação poderosa do React e do Strapi.\n\n💡 Desenvolvimento Web em Constante Evolução\n\nO desenvolvimento web tem testemunhado uma rápida evolução nos últimos anos, impulsionado pela demanda por aplicativos web interativos e escaláveis. Nesse contexto, o React, uma biblioteca JavaScript desenvolvida pelo Facebook, emergiu como uma das principais escolhas para a criação de interfaces de usuário dinâmicas e responsivas.\n\n🚀 React: A Força Impulsionadora\n\nO React conquistou o coração dos desenvolvedores com sua abordagem inovadora de construção de interfaces de usuário. Sua arquitetura baseada em componentes permite a criação de UIs reutilizáveis, o que aumenta a eficiência do desenvolvimento e facilita a manutenção do código.\n\nAlém disso, o React se destaca pela sua capacidade de renderizar apenas as partes da interface que foram alteradas, tornando os aplicativos mais rápidos e responsivos. Essa eficiência é essencial, especialmente em tempos onde a performance é um fator determinante para o sucesso de um aplicativo.\n\n⚙️ Strapi: Capacitando o Gerenciamento de Conteúdo\n\nEnquanto o React brilha na parte front-end, o Strapi entra em ação no back-end, oferecendo uma plataforma poderosa para o gerenciamento de conteúdo. O Strapi permite criar e personalizar modelos de dados complexos de forma intuitiva, tornando o processo de gerenciamento de conteúdo uma tarefa ágil e eficiente.\n\nCom o Strapi, é possível definir tipos de conteúdo, como posts, páginas, produtos, e muito mais. Também é possível criar relacionamentos entre esses tipos de conteúdo, garantindo a flexibilidade necessária para atender às necessidades específicas de um projeto.\n\n💪 A Combinação Perfeita: React + Strapi\n\nAgora, imagine unir essas duas forças - React e Strapi - em um único projeto. A combinação é simplesmente poderosa! Com o React, você pode criar uma interface de usuário dinâmica e interativa que se conecta perfeitamente ao back-end do Strapi.\n\nEssa integração perfeita permite a criação de aplicativos web completos, como blogs, lojas virtuais, painéis de administração e muito mais. O poder do React e a flexibilidade do Strapi se complementam, proporcionando uma experiência de desenvolvimento web incrível.\n\n🌟 Seja um Desenvolvedor Web de Sucesso\n\nSe você está buscando se destacar no mundo do desenvolvimento web, dominar o React e o Strapi é um passo crucial. Combinando essas tecnologias, você estará preparado para criar aplicativos modernos, escaláveis e repletos de recursos.\n\nEntão, junte-se a nós nessa jornada de aprendizado e comece a explorar as possibilidades infinitas do desenvolvimento web com React e Strapi. Esteja pronto para impulsionar sua carreira e construir projetos incríveis.\n\nContinue nos acompanhando",
+            "cover": {
+              "data": {
+                "id": "4",
+                "attributes": {
+                  "alternativeText": null,
+                  "url": "https://res.cloudinary.com/dxcyn87v8/image/upload/v1687195106/ceu_pastel_fundo_bonito_fundo_romantico_fundo_sonhador_130147_1254_fd46889dd5.avif"
+                }
+              }
+            },
+            "categories": {
+              "data": [
+                {
+                  "id": "3",
+                  "attributes": {
+                    "displayName": "Estudos",
+                    "slug": "estudos"
+                  }
+                },
+                {
+                  "id": "5",
+                  "attributes": {
+                    "displayName": "React",
+                    "slug": "react"
+                  }
+                }
+              ]
+            },
+            "tags": {
+              "data": [
+                {
+                  "id": "1",
+                  "attributes": {
+                    "displayName": "useState",
+                    "slug": "use-state"
+                  }
+                }
+              ]
+            },
+            "author": {
+              "data": {
+                "id": "2",
+                "attributes": {
+                  "displayName": "ChatGPT",
+                  "slug": "chat-gpt"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

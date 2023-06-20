@@ -14,7 +14,7 @@ export const parameters = {
       },
       {
         name: 'dark',
-        value: theme.colors.primaryColor,
+        value: theme.colors.primary,
       },
     ],
   },

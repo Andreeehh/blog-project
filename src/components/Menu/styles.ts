@@ -32,7 +32,7 @@ export const Nav = styled.nav`
     width: 100%;
 `;
 
-export const Logo = styled.nav`
+export const Logo = styled.div`
   ${({ theme }) => css`
     ${HeadingStyles}  {
       display: flex;

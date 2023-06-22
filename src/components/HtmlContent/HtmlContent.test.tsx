@@ -8,7 +8,7 @@ describe('<HtmlContent />', () => {
     renderTheme(<HtmlContent html="children" />);
     const p = screen.getByText(/children/i);
     expect(p).toHaveStyle({
-      'font-size': theme.font.sizes.medium,
+      'font-size': '1.8rem',
     });
   });
 });

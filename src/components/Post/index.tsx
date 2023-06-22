@@ -5,6 +5,7 @@ import { HtmlContent } from 'components/HtmlContent';
 import { PostContainer } from 'components/PostContainer';
 
 export type PostProps = {
+  id: string;
   attributes: PostHeader;
 };
 

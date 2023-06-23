@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
-    justify-content; center;
+    justify-content: center;
     padding-bottom; ${theme.spacings.xhuge};
     width: 100%;
     max-width: ${theme.sizes.max};

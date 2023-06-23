@@ -7,7 +7,6 @@ export type PostsTagsProps = {
 };
 
 export const PostsTags = ({ tags }: PostsTagsProps) => {
-  console.log(tags);
   return (
     <Styled.Wrapper>
       tags:

@@ -13,16 +13,16 @@ export type LoadPostsVariables = {
   limit?: number;
 };
 
+export const defaultLoadPostVariables: LoadPostsVariables = {
+  start: 0,
+  limit: 1,
+};
+
 export const loadPosts = async (
   variables: LoadPostsVariables = {},
 ): Promise<PostsTemplateProps> => {
-  const defaultVariables: LoadPostsVariables = {
-    start: 0,
-    limit: 10,
-  };
-
   const data = (await request(config.graphqlUrl, GRAPHQL_QUERIES, {
-    ...defaultVariables,
+    ...defaultLoadPostVariables,
     ...variables,
   })) as PostsTemplateProps;
 

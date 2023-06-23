@@ -19,7 +19,7 @@ export default function Index({ posts, setting }: PostsTemplateProps) {
 }
 
 export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
-  let data = null;
+  let data: PostsTemplateProps | null = null;
 
   try {
     data = await loadPosts();
@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
     data = null;
   }
 
-  if (!data) {
+  if (!data || !data.posts || !data.posts.data.length) {
     return {
       notFound: true,
     };
@@ -38,5 +38,6 @@ export const getStaticProps: GetStaticProps<PostsTemplateProps> = async () => {
       posts: data.posts,
       setting: data.setting,
     },
+    revalidate: 24 * 60 * 60,
   };
 };

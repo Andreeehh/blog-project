@@ -9,7 +9,7 @@ export type PostCardProps = PostProps;
 export const PostCard = ({ attributes }: PostCardProps) => {
   return (
     <Styled.Wrapper>
-      <Link href={attributes.slug}>
+      <Link href={`/post/${attributes.slug}`}>
         <a>
           <Styled.Cover
             src={attributes.cover.data.attributes.url}

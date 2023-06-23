@@ -19,7 +19,7 @@ export type MenuProps = {
 };
 
 export const Menu = ({ blogName, logo, menuLink = [] }: MenuProps) => {
-  const [menuVisible, setMenuVisible] = useState(true);
+  const [menuVisible, setMenuVisible] = useState(false);
 
   const handleOpenCLoseMenu = (event: React.MouseEvent) => {
     event.preventDefault();

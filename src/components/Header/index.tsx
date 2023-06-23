@@ -1,6 +1,5 @@
 import { LogoLink } from 'components/LogoLink';
 import * as Styled from './styles';
-import { HtmlContent } from 'components/HtmlContent';
 import { Heading } from 'components/Heading';
 
 export type HeaderProps = {

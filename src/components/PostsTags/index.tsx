@@ -11,9 +11,7 @@ export const PostsTags = ({ tags }: PostsTagsProps) => {
   return (
     <Styled.Wrapper>
       tags:
-      {tags && tags.data.length === 0 && (
-        <Styled.NotFound>Sem tags</Styled.NotFound>
-      )}
+      {(!tags || tags.data.length === 0) && <span>Sem tags</span>}
       {tags &&
         tags.data.length > 0 &&
         tags.data.map((tag) => (

@@ -19,7 +19,7 @@ export const ArticleMeta = ({
   return (
     <Styled.Wrapper>
       <p>
-        {typeof author !== 'undefined' && (
+        {author && typeof author !== 'undefined' && (
           <>
             <span>Por </span>
             <Link href={`/author/${author.data.attributes.slug}`}>

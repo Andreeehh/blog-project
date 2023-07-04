@@ -4,6 +4,7 @@ import { Menu } from 'components/Menu';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { useRouter } from 'next/router';
+import { GoTop } from 'components/GoTop';
 
 export type BaseProps = {
   setting: SettingsStrapi;
@@ -44,6 +45,7 @@ export const Base = ({ setting, children }: BaseProps) => {
       <Styled.FooterContainer>
         <Footer footerHtml={setting.data.attributes.text} />
       </Styled.FooterContainer>
+      <GoTop />
     </Styled.Wrapper>
   );
 };

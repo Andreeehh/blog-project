@@ -33,7 +33,6 @@ export const PostsTemplate = ({
     };
 
     const morePosts = await loadPosts(newVariables);
-    console.log(morePosts.posts.data.length == 0);
     if (
       !morePosts ||
       !morePosts.posts ||

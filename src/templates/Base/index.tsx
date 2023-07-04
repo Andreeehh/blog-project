@@ -5,6 +5,7 @@ import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
 import { useRouter } from 'next/router';
 import { GoTop } from 'components/GoTop';
+import { ToggleTheme } from 'components/ToggleTheme';
 
 export type BaseProps = {
   setting: SettingsStrapi;
@@ -16,6 +17,7 @@ export const Base = ({ setting, children }: BaseProps) => {
 
   return (
     <Styled.Wrapper>
+      <ToggleTheme />
       <Menu
         menuLink={setting.data.attributes.menuLink}
         blogName={setting.data.attributes.blogName}
@@ -36,7 +38,7 @@ export const Base = ({ setting, children }: BaseProps) => {
             type="search"
             placeholder="Encontre posts"
             name="q"
-            defaultValue={router.query.q}
+            defaultValue={router?.query?.q || ''}
           />
         </form>
       </Styled.SearchContainer>

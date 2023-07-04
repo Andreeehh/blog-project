@@ -15,7 +15,7 @@ export type LoadPostsVariables = {
 
 export const defaultLoadPostVariables: LoadPostsVariables = {
   start: 0,
-  limit: 1,
+  limit: 10,
 };
 
 export const loadPosts = async (

@@ -3,6 +3,7 @@ import * as Styled from './styles';
 import { Menu } from 'components/Menu';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
+import { useRouter } from 'next/router';
 
 export type BaseProps = {
   setting: SettingsStrapi;
@@ -10,6 +11,8 @@ export type BaseProps = {
 };
 
 export const Base = ({ setting, children }: BaseProps) => {
+  const router = useRouter();
+
   return (
     <Styled.Wrapper>
       <Menu
@@ -32,6 +35,7 @@ export const Base = ({ setting, children }: BaseProps) => {
             type="search"
             placeholder="Encontre posts"
             name="q"
+            defaultValue={router.query.q}
           />
         </form>
       </Styled.SearchContainer>

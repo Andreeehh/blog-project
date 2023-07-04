@@ -11,7 +11,7 @@ export const GRAPHQL_QUERIES = gql`
     $authorSlug: String
     $tagSlug: String
     $start: Int = 0
-    $limit: Int = 1
+    $limit: Int = 10
     $sort: [String] = ["createdAt:desc"]
   ){
     setting	{

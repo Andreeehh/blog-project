@@ -11,9 +11,10 @@ export type PostGridProps = {
 export const PostGrid = ({ posts = {} }: PostGridProps) => {
   return (
     <Styled.Wrapper>
-      {!posts.data && (
-        <Styled.NotFound>Nenhum post encontrado aqui =(</Styled.NotFound>
-      )}
+      {!posts.data ||
+        (posts.data.length == 0 && (
+          <Styled.NotFound>Nenhum post encontrado aqui =(</Styled.NotFound>
+        ))}
 
       <Styled.Grid>
         {posts.data &&

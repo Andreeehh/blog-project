@@ -33,7 +33,13 @@ export const PostsTemplate = ({
     };
 
     const morePosts = await loadPosts(newVariables);
-    if (!morePosts || !morePosts.posts || !morePosts.posts.data.length) {
+    console.log(morePosts.posts.data.length == 0);
+    if (
+      !morePosts ||
+      !morePosts.posts ||
+      !morePosts.posts.data.length ||
+      morePosts.posts.data.length == 0
+    ) {
       setNoMorePosts(true);
       return;
     }
@@ -49,11 +55,16 @@ export const PostsTemplate = ({
     <Base setting={setting}>
       <PostGrid posts={statePosts}></PostGrid>
 
-      <Styled.ButtonContainer>
-        <Styled.Button onClick={handleLoadMorePosts} disabled={buttonDisabled}>
-          {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
-        </Styled.Button>
-      </Styled.ButtonContainer>
+      {statePosts && statePosts.data.length ? (
+        <Styled.ButtonContainer>
+          <Styled.Button
+            onClick={handleLoadMorePosts}
+            disabled={buttonDisabled}
+          >
+            {noMorePosts ? 'Sem mais posts' : 'Carregar mais'}
+          </Styled.Button>
+        </Styled.ButtonContainer>
+      ) : null}
     </Base>
   );
 };

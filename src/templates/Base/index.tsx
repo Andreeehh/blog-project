@@ -25,6 +25,17 @@ export const Base = ({ setting, children }: BaseProps) => {
           showText={true}
         />
       </Styled.HeaderContainer>
+
+      <Styled.SearchContainer>
+        <form action="/search/" method="GET">
+          <Styled.SearchInput
+            type="search"
+            placeholder="Encontre posts"
+            name="q"
+          />
+        </form>
+      </Styled.SearchContainer>
+
       <Styled.ContentContainer>{children}</Styled.ContentContainer>
       <Styled.FooterContainer>
         <Footer footerHtml={setting.data.attributes.text} />

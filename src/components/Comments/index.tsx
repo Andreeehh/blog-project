@@ -13,7 +13,7 @@ export const Comments = ({ id, slug, title }: CommentsProps) => {
       <DiscussionEmbed
         shortname="gpt-blog-andre"
         config={{
-          url: `/post/${slug}`,
+          url: `https://blog-project-kappa-one.vercel.app/post/${slug}/`,
           identifier: id,
           title: title,
           language: 'pt_BR',

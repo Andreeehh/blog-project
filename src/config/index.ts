@@ -1,6 +1,6 @@
 export default {
-  url: 'https://strapi-v4-test.herokuapp.com/api/pages/?populate=deep&',
+  url: 'https://strapi-blog-k7p1.onrender.com/api/pages/?populate=deep&',
   siteName: 'André Carvalho',
   defaultSlug: 'landing-page',
-  graphqlUrl: 'http://127.0.0.1:1337/graphql',
+  graphqlUrl: 'https://strapi-blog-k7p1.onrender.com/graphql',
 };

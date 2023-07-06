@@ -1,3 +1,4 @@
+import { Comments } from 'components/Comments';
 import { Post, PostProps } from 'components/Post';
 import { PostsTags } from 'components/PostsTags';
 import { SettingsStrapi } from 'shared-typed/settings-strapi';
@@ -14,6 +15,12 @@ export const PostTemplate = ({ setting, post }: PostTemplateProps) => {
       <Post {...post}></Post>
 
       <PostsTags tags={post.attributes.tags} />
+
+      <Comments
+        title={post.attributes.title}
+        slug={post.attributes.slug}
+        id={post.id}
+      />
     </Base>
   );
 };

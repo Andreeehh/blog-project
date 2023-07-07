@@ -1,5 +1,5 @@
 import { defaultLoadPostVariables, loadPosts } from 'api/load-posts';
-import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { PostsTemplate, PostsTemplateProps } from 'templates/PostsTemplate';

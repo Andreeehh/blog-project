@@ -24,7 +24,11 @@ export const GRAPHQL_QUERIES = gql`
       }
       filters: {
         slug: { eq: $postSlug }
-        title: {containsi: $postSearch}
+        or: [
+          {title: {containsi: $postSearch}}
+          {content: {containsi: $postSearch}}
+          {except: {containsi: $postSearch}}
+        ]
         categories: {
           slug: {eq: $categorySlug}
         }

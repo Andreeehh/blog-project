@@ -1,8 +1,8 @@
 
-#Blog React com Backend no Strapi
+# Blog React com Backend no Strapi
 Este projeto consiste em um blog desenvolvido com React, utilizando o Strapi como backend para gerenciar o conteúdo. O objetivo do blog é apresentar publicações relacionadas a tecnologia web, com foco em temas como React, Javascript e estudos para emprego na Europa. Além disso, o blog utiliza o ChatGPT para gerar posts automaticamente com exemplos de código.
 
-##Funcionalidades
+## Funcionalidades
 Visualização de posts: Os usuários podem visualizar os posts publicados no blog, incluindo os posts gerados automaticamente pelo ChatGPT.
 Geração automática de posts: Utilizando a API do ChatGPT, o blog é capaz de gerar posts automaticamente com base em uma mensagem fornecida pelo usuário. Através dessa funcionalidade, novos posts podem ser criados diariamente.
 Gerenciamento de conteúdo: O Strapi é utilizado como o backend para gerenciar o conteúdo do blog. Com o Strapi, é possível adicionar, editar e excluir posts, bem como definir categorias e tags para organizar o conteúdo.

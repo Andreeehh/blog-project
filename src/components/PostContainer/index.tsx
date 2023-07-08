@@ -20,5 +20,10 @@ export const PostContainer = styled.div<PostContainerProps>`
     padding: 0 ${theme.spacings.large};
     ${postContainerStyles[size](theme)}
 
+    img{
+      width: 100%;
+      max-height: 50rem;
+    }
+
   `}
 `;

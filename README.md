@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Blog React com Backend no Strapi
+Este projeto consiste em um blog desenvolvido com React, utilizando o Strapi como backend para gerenciar o conteúdo. O objetivo do blog é apresentar publicações relacionadas a tecnologia web, com foco em temas como React, Javascript e estudos para emprego na Europa. Além disso, o blog utiliza o ChatGPT para gerar posts automaticamente com exemplos de código.
 
-First, run the development server:
+## Funcionalidades
+Visualização de posts: Os usuários podem visualizar os posts publicados no blog, incluindo os posts gerados automaticamente pelo ChatGPT.
+Geração automática de posts: Utilizando a API do ChatGPT, o blog é capaz de gerar posts automaticamente com base em uma mensagem fornecida pelo usuário. Através dessa funcionalidade, novos posts podem ser criados diariamente.
+Gerenciamento de conteúdo: O Strapi é utilizado como o backend para gerenciar o conteúdo do blog. Com o Strapi, é possível adicionar, editar e excluir posts, bem como definir categorias e tags para organizar o conteúdo.
+Execução do script de criação de posts
+O arquivo create-post.js é responsável por executar o script de criação dos posts gerados pelo ChatGPT. Ele utiliza a biblioteca Axios para fazer as requisições HTTP necessárias para a API do ChatGPT e para o Strapi.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+O script realiza as seguintes etapas:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Envio da requisição ao ChatGPT: Utilizando a função sendChatRequest, o script envia uma mensagem ao ChatGPT para obter um novo post gerado automaticamente. O ChatGPT utiliza as informações fornecidas, como o tema do blog e a mensagem do usuário, para gerar um post completo.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Extração das informações do post: O script utiliza expressões regulares para extrair o título, resumo e conteúdo do post gerado pelo ChatGPT a partir da resposta recebida.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Criação do post no Strapi: Utilizando a função createPost, o script faz uma requisição POST ao endpoint do Strapi para criar um novo post com as informações obtidas. É necessário autenticar-se no Strapi antes de realizar a requisição, para obter o token de autenticação JWT.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+##Agendamento da execução do script
+O script do projeto chatGPT é agendado para ser executado uma vez por dia, às 8h da manhã, utilizando a função scheduleDailyExecution. Essa função calcula o tempo restante até o próximo agendamento e utiliza o setTimeout para agendar a execução do script no horário definido.
 
-## Learn More
+O agendamento é realizado utilizando o serviço externo de agendamento, como o cron-job.org, que envia uma solicitação GET para o URL do Netlify Build Hook uma vez por dia, acionando assim a execução do script.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Hospedagem
+O backend do Strapi está hospedado no Render, enquanto o frontend do blog React está hospedado na Vercel. Ambos os serviços oferecem hospedagem gratuita e escalonamento automático para atender às demandas do projeto. O blog React pode ser acessado no seguinte link: https://blog-project-kappa-one.vercel.app/.

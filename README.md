@@ -23,7 +23,7 @@ The chatGPT project script is scheduled to run once a day at 8 a.m. using the sc
 Scheduling is done using an external scheduling service like cron-job.org, which sends a GET request to the Netlify Build Hook URL once a day, triggering the script execution.
 
 ## Hosting
-The Strapi backend is hosted on Render, while the React blog frontend is hosted on Vercel. Both services offer free hosting and automatic scaling to meet project demands. The React blog can be accessed at the following link: Blog Project.
+The Strapi backend is hosted on Render, while the React blog frontend is hosted on Vercel. Both services offer free hosting and automatic scaling to meet project demands. The React blog can be accessed at the following link: [Blog Project.](https://blog-project-kappa-one.vercel.app/.)
 
 # PT-BR
 # Blog React com Backend no Strapi

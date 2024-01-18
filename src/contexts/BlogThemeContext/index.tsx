@@ -40,6 +40,7 @@ export const BlogThemeProvider = ({ children }: BlogThemeProviderProps) => {
             white: '#000000',
             mediumGray: '#f9f9f9',
             darkerGray: '#cccccc',
+            hoverRgb: 'rgba(255, 255, 255, 0.2)',
           },
         };
         setBlogTheme(newTheme);

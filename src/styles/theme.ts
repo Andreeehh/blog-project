@@ -7,6 +7,7 @@ export const theme = {
     white: '#FFFFFF',
     mediumGray: '#DDDDDD',
     darkerGray: '#AAAAAA',
+    hoverRgb: 'rgba(0, 0, 0, 0.2)',
   },
   font: {
     family: {

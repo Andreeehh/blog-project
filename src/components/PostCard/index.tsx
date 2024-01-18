@@ -4,11 +4,15 @@ import Link from 'next/link';
 import { Heading } from 'components/Heading';
 import { ArticleMeta } from 'components/ArticleMeta';
 
-export type PostCardProps = PostProps;
+export type PostCardProps = {
+  id: string;
+  attributes: PostProps['attributes'];
+  onMouseMove: (e: React.MouseEvent<HTMLDivElement>) => void;
+};
 
-export const PostCard = ({ attributes }: PostCardProps) => {
+export const PostCard = ({ attributes, onMouseMove }: PostCardProps) => {
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper onMouseMove={onMouseMove}>
       <Link href={`/post/${attributes.slug}`}>
         <a>
           <Styled.Cover

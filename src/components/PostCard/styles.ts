@@ -3,15 +3,43 @@ import { Title as HeadingStyles } from 'components/Heading/styles';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  position: relative;
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity: 500ms;
+      border-radius: inherit;
+      z-index: -1;
+      background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y),
+        ${theme.colors.hoverRgb},
+        transparent
+        )
+    }
     ${HeadingStyles}  {
       margin: 0;
       margin-top: calc(${theme.spacings.small} - 0.6rem);
     }
 
+
     a {
       text-decoration: none;
       color: inherit;
       transition: all 300ms ease-in-out;
+
     }
 
     &:hover a {

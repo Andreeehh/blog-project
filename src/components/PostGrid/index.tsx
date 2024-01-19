@@ -10,8 +10,12 @@ export type PostGridProps = {
 };
 
 export const PostGrid = ({ posts = {} }: PostGridProps) => {
-  const handleOnMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    for (const card of document.getElementsByClassName('post')) {
+  const handleOnMouseMove = (e: MouseEvent) => {
+    const postElements = document.getElementsByClassName('post');
+    const postArray = Array.from(postElements);
+
+    for (const cardElement of postArray) {
+      const card = cardElement as HTMLDivElement;
       const rect = card.getBoundingClientRect(),
         x = e.clientX - rect.left,
         y = e.clientY - rect.top;

@@ -7,12 +7,11 @@ import { ArticleMeta } from 'components/ArticleMeta';
 export type PostCardProps = {
   id: string;
   attributes: PostProps['attributes'];
-  onMouseMove: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-export const PostCard = ({ attributes, onMouseMove }: PostCardProps) => {
+export const PostCard = ({ attributes }: PostCardProps) => {
   return (
-    <Styled.Wrapper onMouseMove={onMouseMove}>
+    <Styled.Wrapper className="post">
       <Link href={`/post/${attributes.slug}`}>
         <a>
           <Styled.Cover

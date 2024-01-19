@@ -43,13 +43,19 @@ export const PostGrid = ({ posts = {} }: PostGridProps) => {
       <Styled.Grid>
         {posts.data &&
           posts.data.length > 0 &&
-          posts.data.map((post) => (
-            <PostCard
-              key={`p1-${post.id}`}
-              id={post.id}
-              attributes={post.attributes}
-            />
-          ))}
+          posts.data.map((post, index) => {
+            const transitionDelay = `${3 + (index % 3) * 2}s`;
+
+            return (
+              <PostCard
+                key={`p1-${post.id}`}
+                id={post.id}
+                attributes={post.attributes}
+                noTransition={index < 3}
+                transitionDelay={transitionDelay}
+              />
+            );
+          })}
       </Styled.Grid>
     </Styled.Wrapper>
   );

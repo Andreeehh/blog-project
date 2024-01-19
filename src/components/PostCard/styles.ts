@@ -1,18 +1,20 @@
 import styled, { css } from 'styled-components';
 import { Title as HeadingStyles } from 'components/Heading/styles';
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  position: relative;
+export const Wrapper = styled.div<{ transitionDelay: string }>`
+  ${({ theme, transitionDelay }) => css`
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    position: relative;
+    opacity: 0;
+    transition: opacity ${transitionDelay};
 
-  &:hover::before {
-    opacity: 1;
-  }
+    &:hover::before {
+      opacity: 1;
+    }
 
-  &:before {
+    &:before {
       content: '';
       position: absolute;
       left: 0;
@@ -20,26 +22,25 @@ export const Wrapper = styled.div`
       height: 100%;
       width: 100%;
       opacity: 0;
-      transition: opacity: 500ms;
+      transition: opacity 500ms;
       border-radius: inherit;
       z-index: -1;
       background: radial-gradient(
         400px circle at var(--mouse-x) var(--mouse-y),
         ${theme.colors.hoverRgb},
-        transparent
-        )
+        transparent 40%
+      );
     }
+
     ${HeadingStyles}  {
       margin: 0;
       margin-top: calc(${theme.spacings.small} - 0.6rem);
     }
 
-
     a {
       text-decoration: none;
       color: inherit;
       transition: all 300ms ease-in-out;
-
     }
 
     &:hover a {
@@ -48,6 +49,10 @@ export const Wrapper = styled.div`
 
     &:hover img {
       opacity: 0.8;
+    }
+
+    &.show {
+      opacity: 1;
     }
   `}
 `;

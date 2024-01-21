@@ -8,19 +8,14 @@ import { useEffect, useRef, useState } from 'react';
 export type PostCardProps = {
   id: string;
   attributes: PostProps['attributes'];
-  noTransition?: boolean;
   transitionDelay?: string;
 };
 
-export const PostCard = ({
-  attributes,
-  noTransition,
-  transitionDelay,
-}: PostCardProps) => {
+export const PostCard = ({ attributes, transitionDelay }: PostCardProps) => {
   // Utilize o hook useRef para referenciar o elemento do post
   const postRef = useRef(null);
   // Utilize o estado para controlar se a classe deve ser adicionada
-  const [shouldShow, setShouldShow] = useState(noTransition);
+  const [shouldShow, setShouldShow] = useState(false);
 
   // Função para verificar se o post está visível na tela
   const isElementVisible = () => {
@@ -38,6 +33,8 @@ export const PostCard = ({
         window.removeEventListener('scroll', handleScroll);
       }
     };
+
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
     // Remova o listener ao desmontar o componente

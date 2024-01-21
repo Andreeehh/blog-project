@@ -55,7 +55,6 @@ export const PostGrid = ({ posts = {} }: PostGridProps) => {
                 key={`p1-${post.id}`}
                 id={post.id}
                 attributes={post.attributes}
-                noTransition={index < 3}
                 transitionDelay={transitionDelay}
               />
             );
